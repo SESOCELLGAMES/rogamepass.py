@@ -43,11 +43,21 @@ game_pass(cookie).pass_creator(amount,universeid)
 ```
 ### GAMEPASS BUYER
 ```py
-from roapi import Buyer
+from roapi import buyer
 
 cookie="Put_Your_Cookie"
 Buyer(cookie).buy("True",12345678,"gamepass")
 #The first argument is delete when purchase second argument is id of the gamepass the third argument is type of item asset or gamepass
+```
+
+### GAMEPASS/ASSET DELETER
+```py
+from roapi import deleter
+
+cookie="Put_Your_Cookie"
+deleter(cookie).delete_asset(12345678)
+deleter(cookie).delete_gamepass(12345678)
+#First argument is id of asset 
 ```
 
 [contributors-shield]: https://img.shields.io/github/contributors/sesocell/roapi.svg?style=for-the-badge
