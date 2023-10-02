@@ -1,15 +1,32 @@
 # ROAPI
 Gamepass apis for roblox 
 
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
 # Example Usage
 ```py
-
-gamepass(cookie).pass_cretor(amount,universeid)
+import requests
+from roapi import bilgi
+cookie="PUT_YOUR_COOKIE"
+class game_pass:
+    def __init__(self,cookie:str):
+        self.cookie=cookie
+    def do_offsale(self,passid):
+        url=f"https://apis.roblox.com/game-passes/v1/game-passes/{passid}/details"
+        data={"IsForSale": "false"}
+        a=requests.post(url,data=data,headers=bilgi.get_headers(self.cookie),cookies=bilgi.get_cookies(self.cookie))
+    def pass_cretor(self,amount,universeid):
+        url="https://apis.roblox.com/game-passes/v1/game-passes"
+        data={"Name": "Gamepass Name",
+        "UniverseId": universeid}
+        a=requests.post(url,data=data,headers=bilgi.get_headers(self.cookie),cookies=bilgi.get_cookies(self.cookie))
+        try:
+            passid=a.json()['gamePassId']
+            url=f"https://apis.roblox.com/game-passes/v1/game-passes/{passid}/details"
+            data={"IsForSale": "true","Price": amount}
+            a=requests.post(url,data=data,headers=bilgi.get_headers(self.cookie),cookies=bilgi.get_cookies(self.cookie))
+            print(a.content)
+            return str(passid)
+        except:
+            return "Error"
+game_pass(cookie).pass_cretor(amount,universeid)
 
 ```
