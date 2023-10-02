@@ -16,7 +16,7 @@ pip install requests
 ```py
 import requests
 from roapi import info
-cookie="PUT_YOUR_COOKIE"
+cookie="Put_Your_Cookie"
 class game_pass:
     def __init__(self,cookie:str):
         self.cookie=cookie
@@ -38,8 +38,8 @@ class game_pass:
             return str(passid)
         except:
             return "Error"
-game_pass(cookie).pass_creator(amount,universeid)
-
+game_pass(cookie).pass_creator(1000,12345678)
+#The first arggument is price of gamepass second is universe id
 ```
 ### GAMEPASS BUYER
 ```py
