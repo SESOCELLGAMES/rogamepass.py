@@ -67,7 +67,7 @@ class info:
                     a.append(gamepass['price'])
                     gamepasses.append(a)
         return gamepasses
-class Buyer:
+class buyer:
     def __init__(self,cookie:str):
         self.cookie=cookie
     def buy(self,delete:bool,id:int,type:str):
@@ -95,7 +95,7 @@ class Buyer:
         for passe in info.get_gamepasses(username):
             if  a+passe[1]<=amount:
                 a+=passe[1]
-                Buyer(self.cookie).buy(True,passe[0],"pass")
+                buyer(self.cookie).buy(True,passe[0],"pass")
         if a==amount:
             return "success"
         else:
