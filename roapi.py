@@ -12,7 +12,7 @@ class deleter:
         data={"assetId":assetid}
         requests.post(url,data=data, headers=info.get_headers(self.cookie), cookies=info.get_cookies(self.cookie))
         print("Item Is Deleted")
-    def delete_pass(self,passid):
+    def delete_gamepass(self,passid):
         url=f"https://www.roblox.com/game-pass/revoke"
         data={"id":passid}
         requests.post(url,data=data, headers=info.get_headers(self.cookie), cookies=info.get_cookies(self.cookie))
@@ -78,7 +78,7 @@ class Buyer:
         print(data.content)
         if delete==True:
             if type=="gamepass":
-                deleter(self.cookie).delete_pass(id)
+                deleter(self.cookie).delete_gamepass(id)
             elif type=="asset":
                 deleter(self.cookie).delete_asset(id)
     def get_robux_amount(self):
