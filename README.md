@@ -8,7 +8,7 @@
 Gamepass apis for roblox 
 
 # Example Usage
-### PASS CREATOR
+### GAMEPASS CREATOR
 ```py
 import requests
 from roapi import bilgi
@@ -36,6 +36,14 @@ class game_pass:
             return "Error"
 game_pass(cookie).pass_creator(amount,universeid)
 
+```
+### GAMEPASS BUYER
+```py
+from roapi import Buyer
+
+cookie="Put_Your_Cookie"
+Buyer(cookie).buy("True",12345678,"pass")
+#The first argument is delete when purchase second argument is id of the gamepass the third argument is type of item
 ```
 
 [contributors-shield]: https://img.shields.io/github/contributors/sesocell/roapi.svg?style=for-the-badge
