@@ -59,7 +59,7 @@ deleter(cookie).delete_asset(12345678)
 deleter(cookie).delete_gamepass(12345678)
 #First argument is id of asset 
 ```
-
+If you have an error https://github.com/sesocell/roapi/issues
 [contributors-shield]: https://img.shields.io/github/contributors/sesocell/roapi.svg?style=for-the-badge
 [contributors-url]: https://github.com/sesocell/roapi/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/sesocell/roapi.svg?style=for-the-badge
