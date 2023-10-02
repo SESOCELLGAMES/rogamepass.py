@@ -13,7 +13,7 @@ class game_pass:
         url=f"https://apis.roblox.com/game-passes/v1/game-passes/{passid}/details"
         data={"IsForSale": "false"}
         a=requests.post(url,data=data,headers=bilgi.get_headers(self.cookie),cookies=bilgi.get_cookies(self.cookie))
-    def pass_cretor(self,amount,universeid):
+    def pass_creator(self,amount,universeid):
         url="https://apis.roblox.com/game-passes/v1/game-passes"
         data={"Name": "Gamepass Name",
         "UniverseId": universeid}
@@ -27,6 +27,6 @@ class game_pass:
             return str(passid)
         except:
             return "Error"
-game_pass(cookie).pass_cretor(amount,universeid)
+game_pass(cookie).pass_creator(amount,universeid)
 
 ```
