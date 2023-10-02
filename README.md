@@ -11,7 +11,7 @@ Gamepass apis for roblox
 ### GAMEPASS CREATOR
 ```py
 import requests
-from roapi import bilgi
+from roapi import info
 cookie="PUT_YOUR_COOKIE"
 class game_pass:
     def __init__(self,cookie:str):
@@ -19,17 +19,17 @@ class game_pass:
     def do_offsale(self,passid):
         url=f"https://apis.roblox.com/game-passes/v1/game-passes/{passid}/details"
         data={"IsForSale": "false"}
-        a=requests.post(url,data=data,headers=bilgi.get_headers(self.cookie),cookies=bilgi.get_cookies(self.cookie))
+        a=requests.post(url,data=data,headers=info.get_headers(self.cookie),cookies=info.get_cookies(self.cookie))
     def pass_creator(self,amount,universeid):
         url="https://apis.roblox.com/game-passes/v1/game-passes"
         data={"Name": "Gamepass Name",
         "UniverseId": universeid}
-        a=requests.post(url,data=data,headers=bilgi.get_headers(self.cookie),cookies=bilgi.get_cookies(self.cookie))
+        a=requests.post(url,data=data,headers=info.get_headers(self.cookie),cookies=info.get_cookies(self.cookie))
         try:
             passid=a.json()['gamePassId']
             url=f"https://apis.roblox.com/game-passes/v1/game-passes/{passid}/details"
             data={"IsForSale": "true","Price": amount}
-            a=requests.post(url,data=data,headers=bilgi.get_headers(self.cookie),cookies=bilgi.get_cookies(self.cookie))
+            a=requests.post(url,data=data,headers=info.get_headers(self.cookie),cookies=info.get_cookies(self.cookie))
             print(a.content)
             return str(passid)
         except:
@@ -42,8 +42,8 @@ game_pass(cookie).pass_creator(amount,universeid)
 from roapi import Buyer
 
 cookie="Put_Your_Cookie"
-Buyer(cookie).buy("True",12345678,"pass")
-#The first argument is delete when purchase second argument is id of the gamepass the third argument is type of item
+Buyer(cookie).buy("True",12345678,"gamepass")
+#The first argument is delete when purchase second argument is id of the gamepass the third argument is type of item asset or gamepass
 ```
 
 [contributors-shield]: https://img.shields.io/github/contributors/sesocell/roapi.svg?style=for-the-badge
