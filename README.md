@@ -5,7 +5,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-Gamepass apis for roblox 
+A Api Includes Delete gamepasses and assets from Inventory, Buy Gamepasses, Create Gamepasses for roblox
 
 # Example Usage
 ### GAMEPASS CREATOR
