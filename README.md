@@ -8,6 +8,10 @@
 A Api Includes Delete gamepasses and assets from Inventory, Buy Gamepasses, Create Gamepasses for roblox
 
 # Example Usage
+**NOTE**: You need Install requests library
+```sh
+pip install requests
+  ```
 ### GAMEPASS CREATOR
 ```py
 import requests
