@@ -46,7 +46,7 @@ game_pass(cookie).pass_creator(1000,12345678)
 from roapi import buyer
 
 cookie="Put_Your_Cookie"
-Buyer(cookie).buy("True",12345678,"gamepass")
+buyer(cookie).buy("True",12345678,"gamepass")
 #The first argument is delete when purchase second argument is id of the gamepass the third argument is type of item asset or gamepass
 ```
 
