@@ -2,8 +2,6 @@ import requests
 import time
 useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
 authurl = 'https://auth.roblox.com/v2/logout'
-#authurl is to get xsrf token that doesn't logout of your account
-print("Made by Okis Modified by Sesocell")
 class deleter:
     def __init__(self,cookie:str):
         self.cookie=cookie
@@ -11,12 +9,12 @@ class deleter:
         url=f"https://www.roblox.com/asset/delete-from-inventory"
         data={"assetId":assetid}
         requests.post(url,data=data, headers=info.get_headers(self.cookie), cookies=info.get_cookies(self.cookie))
-        print("Item Is Deleted")
+        print("Item Deleted")
     def delete_gamepass(self,passid):
         url=f"https://www.roblox.com/game-pass/revoke"
         data={"id":passid}
         requests.post(url,data=data, headers=info.get_headers(self.cookie), cookies=info.get_cookies(self.cookie))
-        print("Gamepass Is Deleted")
+        print("Gamepass Deleted")
 class info:
     def get_user_id(cookie):
         url="https://users.roblox.com/v1/users/authenticated"
