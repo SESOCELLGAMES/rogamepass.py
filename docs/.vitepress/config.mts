@@ -5,7 +5,7 @@ export default defineConfig({
   titleTemplate: "SESOCELL",
   description: "Gamepass Apis",
   lang: 'en-us',
-
+  base: "/roapi.py/",
   themeConfig: {
     nav: [
       { text: 'Documentation', link: '/documentation/'},
