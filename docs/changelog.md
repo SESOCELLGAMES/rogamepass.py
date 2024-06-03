@@ -1,4 +1,11 @@
 # Changelog
+## 2.1.0
+
+### What's Changed
+
+* Added Version Checking
+---
+
 ## 2.0.0
 
 ### What's Changed
