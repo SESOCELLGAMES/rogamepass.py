@@ -3,7 +3,7 @@ import time
 useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
 authurl = 'https://auth.roblox.com/v2/logout'
 baseversion = 2
-updateversion = 1.0
+updateversion = 2.0
 githubversion = requests.get("https://versionsroapi.pythonanywhere.com/").json()
 if githubversion["base"] != baseversion:
     print("New release found for Roapi.py Please Download latest version at https://github.com/sesocell/roapi.py/releases/")
@@ -93,12 +93,28 @@ class buyer:
         else:
             return f"Not found gamepass, Sended {a} Wanted {amount}"
 class gamepass:
-    def __init__(self,cookie:str):
+    def __init__(self,cookie:str = None):
         self.cookie=cookie
     def do_offsale(self,passid):
         url=f"https://apis.roblox.com/game-passes/v1/game-passes/{passid}/details"
         data={"IsForSale": "false"}
         a=requests.post(url,data=data,headers=info.get_headers(self.cookie),cookies=info.get_cookies(self.cookie))
+    def edit_gamepass(self,passid : int,data : list):
+        url=f"https://apis.roblox.com/game-passes/v1/game-passes/{passid}/details"
+        request=requests.post(url,data=data,headers=info.get_headers(self.cookie),cookies=info.get_cookies(self.cookie))
+    def check_own(self,userId,passid):
+        url=f'https://inventory.roblox.com/v1/users/{userId}/items/GamePass/{passid}'
+        a=requests.get(url)
+        if a.json()['data']!=[]:
+            return True
+        return False
+    def check_bought(self,passid):
+         url=f"https://apis.roblox.com/game-passes/v1/game-passes/{passid}/details"
+         request=requests.get(url,headers=info.get_headers(self.cookie),cookies=info.get_cookies(self.cookie))
+         if request.json()["gamePassSalesData"]["totalSales"] >= 1:
+             return True
+         else:
+             return False
     def pass_creator(self,amount,universeid):
         url="https://apis.roblox.com/game-passes/v1/game-passes"
         data={"Name": "Gamepass Name",

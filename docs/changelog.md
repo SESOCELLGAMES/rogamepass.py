@@ -1,4 +1,15 @@
 # Changelog
+
+## 2.2.0 <Badge type="tip" text="LATEST" />
+
+### What's Changed
+
+* Added Editing Gamepasses
+* Added check_own
+* Added check_bought
+* Added credits to docs 
+---
+
 ## 2.1.0
 
 ### What's Changed
@@ -15,6 +26,6 @@
 * Now only gamepass type
 ---
 
-::: danger
+::: info
 If something wrong happens let me know
 :::

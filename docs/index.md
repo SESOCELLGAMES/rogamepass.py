@@ -18,4 +18,3 @@ features:
     title: Easy
     details: I made it so It should be easy 😪
 ---
-

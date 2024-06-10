@@ -10,6 +10,7 @@ export default defineConfig({
     nav: [
       { text: 'Documentation', link: '/documentation/'},
       { text: 'Changelog', link: '/changelog/'},
+      { text: 'Credits', link: '/credits/'},
     ],
 
     sidebar: {
@@ -21,19 +22,10 @@ export default defineConfig({
             { text: 'Gamepass Creator', link: '/documentation/create'},
             { text: 'Gamepass Buyer', link: '/documentation/buy'},
             { text: 'Gamepass Deletor', link: '/documentation/delete'},
+            { text: 'Gamepass Editor', link: '/documentation/edit'},
+            { text: 'Checking Own', link: '/documentation/checkown'},
           ]
-        },
-      ],
-      '/guides': [
-        {
-          text: 'Guides',
-          items: [
-            { text: 'Profile Stores', link: '/guides/' },
-            { text: 'Profiles', link: '/guides/profiles' },
-            { text: 'Leaderstats Setup', link: '/guides/leaderstats' },
-            { text: 'Global Keys', link: '/guides/globalkeys' },
-          ]
-        },
+        }
       ]
     },
 
