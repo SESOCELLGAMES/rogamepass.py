@@ -13,8 +13,8 @@ To get UniverseID you need to get Your game page from https://create.roblox.com/
 from roapi import gamepass
 
 cookie="Put_Your_Cookie"
-AmountNumber = 1000
+PriceAmount = 1000
 UniverseID = 123456
 
-gamepass(cookie).pass_creator(AmountNumber,UniverseID)
+gamepass(cookie).pass_creator(PriceAmount,UniverseID)
 ```

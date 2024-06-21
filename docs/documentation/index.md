@@ -1,9 +1,9 @@
 # What is Roapi.py
 
-I did this because I am too sigma. This will do every gamepass tasks (I cant explain 🥹)
+Roapi.py Is A Gamepass Module For Roblox Platform. This module can do gamepass tasks. Like Creating Gamepasses Buying Gamepasses etc.  
 
 ## Setup
-Download the latest Version at this site https://github.com/sesocell/roapi.py/releases/tag/Releases
+Download the latest Version at this link https://github.com/sesocell/roapi.py/releases/latest
 
 ::: warning
 You need to install requests library to use this
