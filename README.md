@@ -1,3 +1,6 @@
+PLEASE READ:
+I forgot password of this account lol. This Repo is moved to https://github.com/semihhdev/roapi.py
+
 # ROAPI
 
 [![Contributors][contributors-shield]][contributors-url]
