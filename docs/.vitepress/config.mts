@@ -18,7 +18,7 @@ export default defineConfig({
         {
           text: 'rogamepass.py Docs',
           items: [
-            { text: 'Roapi', link: '/documentation/'},
+            { text: 'rogamepass', link: '/documentation/'},
             { text: 'Gamepass Creator', link: '/documentation/create'},
             { text: 'Gamepass Buyer', link: '/documentation/buy'},
             { text: 'Gamepass Deletor', link: '/documentation/delete'},
