@@ -22,7 +22,7 @@
 ### What's Changed
 
 * Improved Documentation
-* Creator moved to Roapi.py
+* Creator moved to rogamepass.py
 * Now only gamepass type
 ---
 

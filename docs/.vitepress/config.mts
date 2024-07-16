@@ -1,11 +1,11 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Roapi.py",
+  title: "rogamepass.py",
   titleTemplate: "SESOCELL",
   description: "Gamepass Apis",
   lang: 'en-us',
-  base: "/roapi.py/",
+  base: "/rogamepass.py/",
   themeConfig: {
     nav: [
       { text: 'Documentation', link: '/documentation/'},
@@ -16,7 +16,7 @@ export default defineConfig({
     sidebar: {
       '/documentation': [
         {
-          text: 'Roapi.py Docs',
+          text: 'rogamepass.py Docs',
           items: [
             { text: 'Roapi', link: '/documentation/'},
             { text: 'Gamepass Creator', link: '/documentation/create'},
@@ -41,7 +41,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/sesocell/roapi.py'}
+      { icon: 'github', link: 'https://github.com/sesocell/rogamepass.py'}
     ]
   }
 })

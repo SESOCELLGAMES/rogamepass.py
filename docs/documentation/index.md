@@ -1,9 +1,9 @@
-# What is Roapi.py
+# What is rogamepass.py
 
-Roapi.py Is A Gamepass Module For Roblox Platform. This module can do gamepass tasks. Like Creating Gamepasses Buying Gamepasses etc.  
+rogamepass.py Is A Gamepass Module For Roblox Platform. This module can do gamepass tasks. Like Creating Gamepasses Buying Gamepasses etc.  
 
 ## Setup
-Download the latest Version at this link https://github.com/sesocell/roapi.py/releases/latest
+Download the latest Version at this link https://github.com/sesocell/rogamepass.py/releases/latest
 
 ::: warning
 You need to install requests library to use this
