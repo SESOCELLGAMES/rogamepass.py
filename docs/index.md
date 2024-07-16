@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Roapi.py"
+  name: "rogamepass.py"
   text: "Gamepass things"
   actions:
     - theme: brand

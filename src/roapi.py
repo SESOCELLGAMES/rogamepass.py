@@ -4,11 +4,11 @@ useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, 
 authurl = 'https://auth.roblox.com/v2/logout'
 baseversion = 2
 updateversion = 2.0
-githubversion = requests.get("https://versionsroapi.pythonanywhere.com/").json()
+githubversion = requests.get("https://versionsrogamepass.pythonanywhere.com/").json()
 if githubversion["base"] != baseversion:
-    print("New release found for Roapi.py Please Download latest version at https://github.com/sesocell/roapi.py/releases/")
+    print("New release found for rogamepass.py Please Download latest version at https://github.com/sesocell/rogamepass.py/releases/")
 elif githubversion["update"] != updateversion:
-    print("New update found for Roapi.py Please Download latest version at https://github.com/sesocell/roapi.py/releases/")
+    print("New update found for rogamepass.py Please Download latest version at https://github.com/sesocell/rogamepass.py/releases/")
 class deletor:
     def __init__(self,cookie:str):
         self.cookie=cookie
