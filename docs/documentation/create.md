@@ -12,7 +12,7 @@ To get UniverseID you need to get Your game page from https://create.roblox.com/
    (I did this thing because i am bored why  somebody doesnt know how to find universeid coming to here very weird)
 ## Code
 ```py
-from roapi import gamepass
+from rogamepass import gamepass
 
 cookie="Put_Your_Cookie"
 PriceAmount = 1000

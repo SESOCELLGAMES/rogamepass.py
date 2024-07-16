@@ -4,7 +4,7 @@
 This will edit gamepasses by given values 
 ## Code
 ```py
-from roapi import gamepass
+from rogamepass import gamepass
 
 cookie="Put_Your_Cookie"
 GamepassID = 123456

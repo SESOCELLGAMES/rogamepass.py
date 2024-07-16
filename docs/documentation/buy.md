@@ -4,7 +4,7 @@ It will buy gamepass from gamepassid
 
 ## Code
 ```py
-from roapi import buyer
+from rogamepass import buyer
 
 cookie="Put_Your_Cookie"
 GamepassID = 123456
